@@ -1,25 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>PDF to Text OCR</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
 
-<h2>📄 PDF to Text (Free OCR)</h2>
+<div class="container">
+  <h1>📄 PDF to Text OCR</h1>
 
-<input type="file" id="fileInput" accept="application/pdf">
-<button onclick="processPDF()">Extract Text</button>
+  <input type="file" id="fileInput" accept="application/pdf">
 
-<p id="status"></p>
+  <button id="extractBtn" onclick="processPDF()">Extract Text</button>
 
-<textarea id="output" placeholder="Extracted text will appear here..."></textarea>
+  <p id="status"></p>
 
-<button onclick="downloadText()">Download Text</button>
+  <div class="progress-bar">
+    <div id="progress"></div>
+  </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@2"></script>
-<script src="script.js"></script>
+  <textarea id="output" placeholder="Extracted text will appear here..."></textarea>
+
+  <button onclick="downloadText()">Download Text</button>
+</div>
 
 </body>
-</html>
