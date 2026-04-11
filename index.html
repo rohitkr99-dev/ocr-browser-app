@@ -1,8 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OCR Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<div class="container">
-  <h1>📄 PDF to Text OCR</h1>
+<div class="hero">
+  <h1>Extract Text from PDFs</h1>
+  <p>Fast, free, and private OCR directly in your browser</p>
+</div>
 
+<div class="card">
   <input type="file" id="fileInput" accept="application/pdf">
 
   <button id="extractBtn" onclick="processPDF()">Extract Text</button>
@@ -13,9 +22,14 @@
     <div id="progress"></div>
   </div>
 
-  <textarea id="output" placeholder="Extracted text will appear here..."></textarea>
+  <textarea id="output" placeholder="Your extracted text will appear here..."></textarea>
 
-  <button onclick="downloadText()">Download Text</button>
+  <button class="secondary" onclick="downloadText()">Download Text</button>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@2"></script>
+<script src="script.js"></script>
+
 </body>
+</html>
