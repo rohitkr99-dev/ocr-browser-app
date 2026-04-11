@@ -1,67 +1,71 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-  background: linear-gradient(180deg, #f8fafc, #eef2f7);
-  color: #1a1a1a;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: white;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px 30px;
+  padding: 80px 20px 30px;
 }
 
 .hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 42px;
+  font-weight: 600;
 }
 
 .hero p {
-  color: #666;
-  font-size: 16px;
+  color: #94a3b8;
+  margin-top: 10px;
 }
 
 /* CARD */
-.card {
-  max-width: 600px;
+.upload-card {
+  max-width: 650px;
   margin: auto;
-  background: white;
   padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
-/* INPUT */
-input[type="file"] {
-  width: 100%;
-  margin-bottom: 15px;
+/* DROP ZONE */
+.drop-zone {
+  border: 2px dashed rgba(255,255,255,0.2);
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.drop-zone:hover {
+  background: rgba(255,255,255,0.05);
 }
 
 /* BUTTONS */
 button {
   width: 100%;
-  padding: 12px;
-  margin-top: 10px;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
   border: none;
-  border-radius: 8px;
-  background: #4f46e5;
+  font-size: 15px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
   color: white;
-  font-size: 14px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #4338ca;
+  transform: translateY(-2px);
 }
 
 button.secondary {
-  background: #e5e7eb;
-  color: #111;
-}
-
-button.secondary:hover {
-  background: #d1d5db;
+  background: rgba(255,255,255,0.1);
 }
 
 /* TEXTAREA */
@@ -69,24 +73,33 @@ textarea {
   width: 100%;
   height: 250px;
   margin-top: 15px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  padding: 12px;
+  background: rgba(255,255,255,0.08);
+  color: white;
 }
 
-/* PROGRESS BAR */
-.progress-bar {
+/* PROGRESS */
+.progress-container {
   width: 100%;
   height: 6px;
-  background: #eee;
+  background: rgba(255,255,255,0.1);
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 #progress {
   height: 100%;
   width: 0%;
-  background: #4f46e5;
+  background: linear-gradient(90deg, #6366f1, #22c55e);
   border-radius: 10px;
   transition: width 0.3s;
+}
+
+/* STATUS */
+#status {
+  margin-top: 10px;
+  color: #cbd5f5;
+  font-size: 14px;
 }
