@@ -1,105 +1,141 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-  background: radial-gradient(circle at top, #1e293b, #020617);
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-/* HERO */
-.hero {
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
   text-align: center;
-  padding: 80px 20px 30px;
 }
 
+/* Hero */
 .hero h1 {
   font-size: 42px;
-  font-weight: 600;
+  font-weight: 700;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
+  margin-top: 12px;
   color: #94a3b8;
-  margin-top: 10px;
+  font-size: 16px;
 }
 
-/* CARD */
+/* Card */
 .upload-card {
-  max-width: 650px;
-  margin: auto;
-  padding: 25px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-/* DROP ZONE */
+/* Drop Zone */
 .drop-zone {
-  border: 2px dashed rgba(255,255,255,0.2);
+  border: 2px dashed #334155;
   padding: 40px;
-  text-align: center;
-  border-radius: 12px;
+  border-radius: 14px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .drop-zone:hover {
-  background: rgba(255,255,255,0.05);
+  border-color: #38bdf8;
+  background: rgba(56,189,248,0.05);
 }
 
-/* BUTTONS */
-button {
+.drop-zone p {
+  color: #94a3b8;
+}
+
+/* Buttons */
+.primary-btn {
+  margin-top: 20px;
   width: 100%;
   padding: 14px;
-  margin-top: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
-  font-size: 15px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
   color: white;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
 
-button:hover {
+.primary-btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99,102,241,0.4);
 }
 
-button.secondary {
-  background: rgba(255,255,255,0.1);
-}
-
-/* TEXTAREA */
-textarea {
-  width: 100%;
-  height: 250px;
+.secondary-btn {
   margin-top: 15px;
-  border-radius: 10px;
-  border: none;
+  width: 100%;
   padding: 12px;
-  background: rgba(255,255,255,0.08);
-  color: white;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: #cbd5f5;
+  cursor: pointer;
 }
 
-/* PROGRESS */
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Progress Bar */
 .progress-container {
+  margin-top: 20px;
   width: 100%;
-  height: 6px;
-  background: rgba(255,255,255,0.1);
+  height: 8px;
+  background: #1e293b;
   border-radius: 10px;
-  margin-top: 15px;
+  overflow: hidden;
 }
 
 #progress {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #6366f1, #22c55e);
-  border-radius: 10px;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
   transition: width 0.3s;
 }
 
-/* STATUS */
+/* Status */
 #status {
   margin-top: 10px;
-  color: #cbd5f5;
   font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Textarea */
+textarea {
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e2e8f0;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
 }
