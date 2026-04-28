@@ -6,29 +6,37 @@
 </head>
 <body>
 
-<div class="hero">
-  <h1>Extract Text from PDFs in Seconds</h1>
-  <p>Private. Fast. Runs directly in your browser.</p>
-</div>
+<div class="container">
 
-<div class="upload-card">
-
-  <div class="drop-zone" onclick="document.getElementById('fileInput').click()">
-    <p>📄 Drag & drop PDF here or click to upload</p>
-    <input type="file" id="fileInput" accept="application/pdf" hidden>
+  <div class="hero">
+    <h1>Extract Text from PDFs</h1>
+    <p>Private. Fast. Runs entirely in your browser.</p>
   </div>
 
-  <button id="extractBtn" onclick="processPDF()">Extract Text</button>
+  <div class="upload-card">
 
-  <div class="progress-container">
-    <div id="progress"></div>
+    <div class="drop-zone" onclick="document.getElementById('fileInput').click()">
+      <p>📄 Drag & drop PDF or click to upload</p>
+      <input type="file" id="fileInput" accept="application/pdf" hidden>
+    </div>
+
+    <button class="primary-btn" id="extractBtn" onclick="processPDF()">
+      Extract Text
+    </button>
+
+    <div class="progress-container">
+      <div id="progress"></div>
+    </div>
+
+    <p id="status"></p>
+
+    <textarea id="output" placeholder="Extracted text will appear here..."></textarea>
+
+    <button class="secondary-btn" onclick="downloadText()">
+      Download Text
+    </button>
+
   </div>
-
-  <p id="status"></p>
-
-  <textarea id="output" placeholder="Your extracted text will appear here..."></textarea>
-
-  <button class="secondary" onclick="downloadText()">Download Text</button>
 
 </div>
 
